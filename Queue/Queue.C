@@ -2,6 +2,7 @@
 #include "Queue.h"
 #include <iostream>
 
+//This function push the new data to the end of the end of the Queue
 template <typename T>
 void Queue<T>::push(T data){
 	if (head == NULL){
@@ -14,8 +15,9 @@ void Queue<T>::push(T data){
 	}
 }
 
+//This return the last element at the back, similar to the top in the stack just the name is diffenrence. 
 template <typename T>
-T Queue<T>::top(){
+T Queue<T>::back(){
 	if (head == NULL){
 		cout << "The Queue is empty"  << endl;
 		return 0;
@@ -23,6 +25,7 @@ T Queue<T>::top(){
 	return tail->data;
 }
 
+//remove the element at the top
 template <typename T>
 int Queue<T>::pop(){
 	if (head == NULL){
@@ -36,6 +39,7 @@ int Queue<T>::pop(){
 	}
 }
 
+//check if the queue is empty
 template <typename T>
 bool Queue<T>::isEmpty(){
 	if (head == NULL){
@@ -45,6 +49,7 @@ bool Queue<T>::isEmpty(){
 	}
 }
 
+//check the size of the queue
 template <typename T>
 int Queue<T>::size(){
 	int count = 0;

@@ -13,7 +13,7 @@ class Queue{
 	public:
 		void push(T data);
 		int pop(); //return 0 if success and -1 if not
-		T top();
+		T back();
 		bool isEmpty();
 		int size();
 };
