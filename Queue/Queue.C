@@ -31,7 +31,13 @@ int Queue<T>::pop(){
 	if (head == NULL){
 		cout << "Nothing to be poped " << endl;
 		return 0;
-	}else{
+	}else if(head->next == NULL){
+		delete head;
+		head = NULL;
+		tail = NULL;
+		return 1;
+	}
+	else{
 		node<T> *tmp = head;
 		head = head->next;
 		delete tmp;
