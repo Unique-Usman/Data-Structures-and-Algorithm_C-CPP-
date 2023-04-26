@@ -23,7 +23,7 @@ int main()
 	int base;  //the base to be specified by the user.
 	cout << "Input the data in base 10 which you want to convert " << endl;
 	cin >> data; //getting the data from the user. 
-	cout << "Input the base you want to convert the number to. The base should be from base 1 to 10 and also base 16, it also work for other base." << endl;
+	cout << "Input the base you want to convert the number to. The base should be from base 2 updward." << endl;
 	cin >> base;
 	stack<int> s1; //this will store the converted string.
 
