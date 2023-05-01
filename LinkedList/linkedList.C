@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace  std;
 
@@ -91,6 +91,35 @@ node* deleteNodeEnd(node** head){
 		return tmp;
 	}
 }
+
+//function to print linkedlist in a reverse manner
+void printListReverse(node* head)
+{
+	if (head->next != NULL){
+		printListReverse(head->next);
+		cout << head->data << endl;
+	}
+}
+
+//function to print node in reverse manner using loop
+void printReverseLoop(node* head)
+{
+	node* tmp = head;
+	stack<int> dataStack;
+	if (tmp == NULL){
+		return;
+	}else{
+		while (tmp != NULL){
+			dataStack.push(tmp->data);
+			tmp = tmp->next;
+		}
+	}
+
+	while (!dataStack.empty()){
+		cout << dataStack.top() << endl;
+		dataStack.pop();
+	}
+}
 int main(){
 	node *head; // head of the linked-list
 	head = NULL; 
@@ -104,6 +133,8 @@ int main(){
 	addNodeBegin(900, &head);
 	cout << "New change" << endl;
 	printNode(head);
+	cout << "printing the node in a reverse manner" << endl;
+	printListReverse(head);
 	deleteNodeBegin(&head);
 	cout << "New change" << endl;
 	printNode(head);
@@ -111,6 +142,6 @@ int main(){
 	curNode = deleteNodeEnd(&head);
 	curNode = deleteNodeEnd(&head);
 	cout << "New change" << endl;
-	printNode(head);	
+	printNode(head);
 }
 
