@@ -14,8 +14,9 @@ class Chain {
         void insertend(T);
         void remove(T);
         void printchain();
+	void printReverse();
         int countNodes();
-        void reverseLink();
+//        void reverseLink();
         void insertAfter(T,T); // inserts a node after finding the specified data
         ~Chain(); //destructor; 
 };

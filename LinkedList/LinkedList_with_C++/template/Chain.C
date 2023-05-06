@@ -164,3 +164,12 @@ Chain<T>::~Chain() {              // destructor
                         first = tmp;
 		}
 }
+
+/*template <typename T>
+void Chain<T>::printReverse()
+{
+	if (first != NULL)
+	{
+		printReverse()
+	}
+}*/
