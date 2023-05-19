@@ -2,6 +2,7 @@
 #define CHAINNODE_H
 #include "node.h"
 #include <iostream>
+using namespace std;
 	class chainNode{
 		private:
 			static node* firstNode;
@@ -10,15 +11,14 @@
 			static void printNode();
 			static void insertNodeEnd();
 			static void insertNodeFront();
-        		static void insertbegin(T);
-        		static void insertend(T);
-        		static void remove(T);
+        		static void insertbegin(int);
+        		static void insertend(int);
+        		static void remove(int);
         		static void printchain();
        			static void printReverse();
 			static void reverseNode();
         		static int countNodes();
-        		static void insertAfter(T,T); // inserts a node after finding the specified data
+        		static void insertAfter(int,int); // inserts a node after finding the specified data
 };
 
-	};
 #endif

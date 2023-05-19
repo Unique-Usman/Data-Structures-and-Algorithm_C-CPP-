@@ -5,7 +5,7 @@
 		node* next;
 		node* prev;
 		public:
-		node(int data):this->data(data){}
+		node(int data):data(data){}
 		friend class chainNode;
 	};
 #endif
