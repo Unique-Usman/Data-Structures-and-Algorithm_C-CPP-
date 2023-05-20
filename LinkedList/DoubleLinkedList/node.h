@@ -1,11 +1,12 @@
 #ifndef NODE_H
 #define NODE_H
+	template <typename T>
 	class node{
-		int data;
-		node* next;
-		node* prev;
+		T data;
+		node<T>* next;
+		node<T>* prev;
 		public:
-		node(int data):data(data){}
-		friend class chainNode;
+		node(T data):data(data){}
+		template <typename>friend class chainNode;
 	};
 #endif
