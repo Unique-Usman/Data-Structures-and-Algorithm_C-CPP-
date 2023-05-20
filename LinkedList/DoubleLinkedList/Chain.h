@@ -10,7 +10,7 @@ using namespace std;
 		public:
 			static void printNode();
 			static void insertNodeEnd();
-			static void insertNodeFront();
+			static void insertNodeFront(int);
         		static void insertbegin(int);
         		static void insertend(int);
         		static void remove(int);
