@@ -1,8 +1,9 @@
 #include "Chain.h"
 
-void chainNode::printNode()
+typename <template T
+void chainNode<T>::printNode()
 {
-	node* tmp = firstNode;
+	node<T>* tmp = firstNode;
 	while (tmp != NULL)
 	{
 		cout << tmp->data << endl;
@@ -10,16 +11,17 @@ void chainNode::printNode()
 	}
 }
 
-void chainNode::insertNodeFront(int data)
+typename <template T
+void chainNode<T>::insertNodeFront(int data)
 {
 	if (firstNode == NULL)
 	{
-		firstNode = new node(data);
+		firstNode = new node<T>(data);
 		firstNode->next = NULL;
 		firstNode->prev = NULL;
 		currentNode = firstNode;
 	}else{
-		node* tmp = new node(data);
+		node<T>* tmp = new node<T>(data);
 		tmp->next = firstNode;
 		firstNode->prev = tmp;
 		firstNode = tmp;
